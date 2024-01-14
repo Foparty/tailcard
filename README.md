@@ -67,3 +67,4 @@ and add this to .prettierrc
 `{
   "plugins": ["prettier-plugin-tailwindcss"]
 }`
+# tailwindCard
