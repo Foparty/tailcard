@@ -1,61 +1,49 @@
----
-interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
-
-const { href, title, body } = Astro.props;
----
-
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
+<article
+	class='group relative aspect-video h-96 w-[36rem] cursor-pointer overflow-hidden rounded-xl shadow-md hover:shadow-2xl'
+>
+	<img
+		class='absolute inset-0 h-full w-full object-cover opacity-90 transition-opacity duration-300 ease-out group-hover:opacity-100 group-hover:transition-opacity group-hover:duration-300'
+		src='https://images.unsplash.com/photo-1682687220063-4742bd7fd538?q=80&w=3175&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+		alt=''
+	/>
+	<div
+		class='absolute inset-0 bg-gradient-to-t from-black/0 to-transparent to-90% text-white transition-all duration-300 group-hover:bg-gradient-to-t group-hover:from-black/60 group-hover:transition-all group-hover:duration-500'
+	>
+		<h2
+			class='absolute bottom-8 left-8 m-0 font-extrabold uppercase transition-all delay-300 duration-100 ease-out group-hover:bottom-1/2 group-hover:delay-0 group-hover:duration-300'
+		>
+			title
 		</h2>
-		<p>
-			{body}
+		<p
+			class='absolute left-8 top-1/2 line-clamp-3 max-w-[80%] pt-4 opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100 group-hover:delay-500 group-hover:duration-300'
+		>
+			Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor nostrum
+			nesciunt reiciendis labore vel velit blanditiis vero, amet corporis porro
+			saepe officiis officia sit sequi molestiae ab libero, quo tempora
+			repellat? Facilis doloremque, eligendi neque sed fuga tempore hic magnam
+			qui in sint maiores id, itaque totam, quis quasi! Minima amet excepturi
+			sit aliquid dolores eos quam asperiores eius consectetur repudiandae
+			pariatur nostrum laboriosam, non ullam? Exercitationem ipsam illum eos
+			architecto veniam magnam, officia pariatur sit odit inventore ab natus
+			culpa cum placeat illo voluptas eum reprehenderit adipisci. Nostrum vel
+			aperiam dolorem quo exercitationem dicta aut doloremque itaque tempore
+			similique at accusantium veniam voluptate, commodi quis debitis accusamus,
+			esse qui saepe adipisci odit corporis? Ad ipsam dolores aspernatur animi
+			unde voluptas vero recusandae totam alias. Placeat quasi, perferendis ad
+			cum illo quaerat est cumque maxime incidunt natus corporis debitis et
+			nesciunt, excepturi ipsam officiis laborum voluptate perspiciatis
+			blanditiis provident ut aliquid fugit nemo illum. Similique, sequi
+			doloribus soluta suscipit eligendi quidem laudantium modi incidunt dolore
+			officia nam blanditiis numquam iusto temporibus odit unde consectetur
+			voluptatem enim asperiores rerum quam, repellat commodi aliquid impedit!
+			Voluptatibus, ex asperiores sed, laborum quibusdam quae assumenda vero in
+			minima qui est numquam modi placeat cum!
 		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
-</style>
+		<a
+			class='absolute bottom-8 left-8 max-w-[80%] rounded-lg border px-4 py-2 uppercase opacity-0 transition-opacity ease-out group-hover:opacity-100 group-hover:transition-opacity group-hover:delay-500 group-hover:duration-300'
+			href='/'>find out more</a
+		>
+	</div>
+</article>
+
+<style></style>
